@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Guard Check-in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        #log {
+            margin-top: 30px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Security Guard Check-in</h2>
+    <button onclick="logCheckIn()">Check-in</button>
+    <div id="log"></div>
+    
+    <script>
+        function logCheckIn() {
+            let now = new Date();
+            let timestamp = now.toLocaleString();
+            let logEntry = document.createElement("p");
+            logEntry.textContent = `Checked in at: ${timestamp}`;
+            document.getElementById("log").appendChild(logEntry);
+        }
+    </script>
+</body>
+</html>
